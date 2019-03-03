@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         galleryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         galleryCollectionView.topAnchor.constraint(equalTo: deliveryLabel.bottomAnchor, constant: 10).isActive = true
         galleryCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        
+        galleryCollectionView.set(cells: SushiModel.fetchSushi())
     }
 
 
