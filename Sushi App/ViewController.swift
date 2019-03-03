@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var galleryCollectionView = UICollectionView(frame: <#T##CGRect#>, collectionViewLayout: <#T##UICollectionViewLayout#>)
+    @IBOutlet weak var deliveryLabel: UILabel!
+    
+    private var galleryCollectionView = GalleryCollectionView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        view.addSubview(galleryCollectionView)
+        galleryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        galleryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        galleryCollectionView.topAnchor.constraint(equalTo: deliveryLabel.bottomAnchor, constant: 10).isActive = true
+        galleryCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
     }
 
 

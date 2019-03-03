@@ -14,6 +14,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     let mainImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = #colorLiteral(red: 0.711850822, green: 0, blue: 0.1099039987, alpha: 1)
         return imageView
     }()

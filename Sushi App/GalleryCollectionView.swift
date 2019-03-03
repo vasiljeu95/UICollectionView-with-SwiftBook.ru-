@@ -17,17 +17,21 @@ class GalleryCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)
         
+        backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         delegate = self
         dataSource = self
-        register(GalleryCollectionViewCell.self(<#T##NSObject#>), forCellWithReuseIdentifier: <#T##String#>)
+        register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.reuseID)
+        
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cells.count
+        return 5 // cells.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseID, for: indexPath)
+        return cell
     }
     
     required init?(coder aDecoder: NSCoder) {
