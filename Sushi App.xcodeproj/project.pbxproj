@@ -12,6 +12,7 @@
 		6BE854DE222C2511008A50AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE854DC222C2511008A50AE /* Main.storyboard */; };
 		6BE854E0222C2514008A50AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE854DF222C2514008A50AE /* Assets.xcassets */; };
 		6BE854E3222C2514008A50AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE854E1222C2514008A50AE /* LaunchScreen.storyboard */; };
+		6BE854EB222C28FC008A50AE /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE854EA222C28FC008A50AE /* GalleryCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6BE854DF222C2514008A50AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BE854E2222C2514008A50AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BE854E4222C2514008A50AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE854EA222C28FC008A50AE /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				6BE854D8222C2511008A50AE /* AppDelegate.swift */,
 				6BE854DA222C2511008A50AE /* ViewController.swift */,
+				6BE854EA222C28FC008A50AE /* GalleryCollectionView.swift */,
 				6BE854DC222C2511008A50AE /* Main.storyboard */,
 				6BE854DF222C2514008A50AE /* Assets.xcassets */,
 				6BE854E1222C2514008A50AE /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE854EB222C28FC008A50AE /* GalleryCollectionView.swift in Sources */,
 				6BE854DB222C2511008A50AE /* ViewController.swift in Sources */,
 				6BE854D9222C2511008A50AE /* AppDelegate.swift in Sources */,
 			);
