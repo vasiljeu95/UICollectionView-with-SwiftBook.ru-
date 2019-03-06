@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FoodViewController: UIViewController {
 
     @IBOutlet weak var deliveryLabel: UILabel!
     
@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         galleryCollectionView.set(cells: SushiModel.fetchSushi())
     }
 
-
+    @IBAction func menuButton(_ sender: UIButton) {
+        print("123")
+    }
+    
 }
 
