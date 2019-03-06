@@ -79,9 +79,9 @@
 		6BEB0C2B2230169E009C2B56 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6BEB0C272230166F009C2B56 /* ContainerViewController.swift */,
 				6BEB0C2922301680009C2B56 /* MenuViewController.swift */,
 				6BE854DA222C2511008A50AE /* FoodViewController.swift */,
-				6BEB0C272230166F009C2B56 /* ContainerViewController.swift */,
 				6BE854EA222C28FC008A50AE /* GalleryCollectionView.swift */,
 			);
 			path = Controllers;
