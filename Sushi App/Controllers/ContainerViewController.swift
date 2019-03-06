@@ -12,6 +12,7 @@ class ContainerViewController: UIViewController, FoodViewControllerDelegate {
 
     var controller: UIViewController!
     var menuViewController: UIViewController!
+    var isMove = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class ContainerViewController: UIViewController, FoodViewControllerDelegate {
     
     func configuereFoodViewController() {
         let foodViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! FoodViewController
+        foodViewController.delegate = self
         controller = foodViewController
         view.addSubview(controller.view)
         addChild(controller)
@@ -35,9 +37,39 @@ class ContainerViewController: UIViewController, FoodViewControllerDelegate {
         }
     }
     
+    func showMenuViewController(shouldmove: Bool) {
+        if shouldmove == true {
+            // show Menu
+            UIView.animate(withDuration: 0.5,
+                           delay: 0,
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                            self.controller.view.frame.origin.x = self.controller.view.frame.width - 140
+            }) { (finished) in
+                
+            }
+        } else {
+            // delete Menu
+            UIView.animate(withDuration: 0.5,
+                           delay: 0,
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                            self.controller.view.frame.origin.x = 0
+            }) { (finished) in
+                
+            }
+        }
+    }
+    
     // MARK: FoodViewControllerDelegate
     func toggleMenu() {
-        configuereFoodViewController()
+        configuereMenuViewController()
+        isMove = !isMove
+        showMenuViewController(shouldmove: isMove)
     }
 
 }
