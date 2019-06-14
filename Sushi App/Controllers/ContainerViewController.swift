@@ -46,7 +46,7 @@ class ContainerViewController: UIViewController, FoodViewControllerDelegate {
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {
-                            self.controller.view.frame.origin.x = self.controller.view.frame.width - 140
+                            self.controller.view.frame.origin.x = self.controller.view.frame.width - 200
             }) { (finished) in
                 
             }

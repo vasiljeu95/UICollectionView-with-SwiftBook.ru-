@@ -29,6 +29,8 @@ class MenuViewController: UIViewController {
         
         tableView.separatorStyle = .none
         tableView.rowHeight = 90
+        
+        tableView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
 }
 
@@ -40,6 +42,13 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableCell.reuseId) as! MenuTableCell
+        let menuModel = MenuModel(rawValue: indexPath.row)
+        cell.iconImageView.image = menuModel?.image
+        cell.myLabel.text = menuModel?.description
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -17,7 +17,6 @@ class MenuTableCell: UITableViewCell {
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.backgroundColor = #colorLiteral(red: 0, green: 0.6791806817, blue: 0, alpha: 1)
         return iv
     }()
     
@@ -26,6 +25,7 @@ class MenuTableCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Custom text"
         label.font = UIFont.systemFont(ofSize: 20)
+        label.textColor = .white
         return label
     }()
     
@@ -34,6 +34,8 @@ class MenuTableCell: UITableViewCell {
         
         addSubview(iconImageView)
         addSubview(myLabel)
+        
+        backgroundColor = .clear
         
         // iconImageView constaints
         iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
